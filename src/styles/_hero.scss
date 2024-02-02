@@ -1,0 +1,59 @@
+@use 'variables';
+
+.hero {
+    padding-top: 64px;
+    padding-bottom: 100px;
+    background-image: url(../images/bunner02.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 8px 8px;
+    margin-bottom: 0;
+
+    .container {
+        position: relative;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: variables.$secondaryTextColor;
+        content: '';
+        opacity: 0.7;
+    }
+    
+    &__text {
+        font-size: 40px;
+        line-height: 56px;
+        font-weight: 800;
+        text-align: center;
+    }
+    
+    #countdown {
+        font-size: 36px;
+        font-weight: bold;
+        font-size: 2.0em;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    @media (max-width: 640px) {
+
+        padding: 40px 0;
+
+        &__text  {
+            font-size: 24px;
+            line-height: 24px;
+            margin: 8px 0;
+        }
+        
+        #countdown {
+            font-size: 24px;
+            line-height: 24px;
+            margin: 24px 0;
+        }
+    }
+}
